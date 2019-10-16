@@ -1,0 +1,33 @@
+<Window x:Class="iCore.Client.WPF.Windows.ModalDialogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:iCore.Client.WPF.Windows"
+        xmlns:views="clr-namespace:iCore.Client.WPF.Views"
+        mc:Ignorable="d"
+        Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen" >
+    
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Close"
+                        Executed="CloseCommandHandler"
+                        CanExecute="CanExecuteHandler"
+        />
+    </Window.CommandBindings>
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        
+        <views:AboutView Grid.Row="0" />
+        
+        <Button Grid.Row="1" x:Name="CloseButton" Content="Close" Margin="10" HorizontalAlignment="Right" Command="ApplicationCommands.Close" />
+        
+        <Line Stroke="Gray" StrokeThickness="1" X1="0" Y1="390" X2="850" Y2="390" />
+        
+    </Grid>
+    
+</Window>

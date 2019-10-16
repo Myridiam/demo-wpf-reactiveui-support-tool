@@ -1,0 +1,62 @@
+﻿<Window x:Class="iCore.Client.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:iCore.Client.WPF"
+        xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="iCore - Support Tool" Height="350" Width="525" x:Name="windowMain" 
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
+    <DockPanel>
+        <smtx:XamlDisplay Key="menus_1" DockPanel.Dock="Top" Margin="5 5 0 5">
+            <Menu IsMainMenu="True">
+                <MenuItem Header="_File">
+                    <MenuItem Header="Settings">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon Kind="Settings" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="Exit" InputGestureText="Ctrl+E">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon Kind="ExitToApp" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="_Actions">
+                    <MenuItem Header="System Information">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon Kind="Engine" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="Package as ZIP" InputGestureText="Ctrl+Z">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon Kind="ZipDisk" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="_Help">
+                    <MenuItem Header="_Check for Updates">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon Kind="Update" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator />
+                    <MenuItem Header="_About" Command="{Binding ShowAboutCommand}">
+                        <MenuItem.Icon>
+                            <materialDesign:PackIcon Kind="About" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        </smtx:XamlDisplay>
+    </DockPanel>
+    
+</Window>
