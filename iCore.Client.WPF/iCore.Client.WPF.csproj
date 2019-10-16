@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MaterialDesignColors" Version="1.2.1-ci413" />
+      <PackageReference Include="MaterialDesignThemes" Version="3.0.0-ci413" />
+      <PackageReference Include="ReactiveUI" Version="10.0.1-preview.6" />
+      <PackageReference Include="ReactiveUI.WPF" Version="10.0.1-preview.6" />
+      <PackageReference Include="ShowMeTheXAML.MSBuild" Version="1.1.0-ci70" />
+    </ItemGroup>
+
+</Project>
